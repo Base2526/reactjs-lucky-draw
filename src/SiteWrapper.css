@@ -7,3 +7,18 @@
     padding-top: 32px;
     padding-bottom: 32px;
 }
+
+.header-brand-img{
+    height: 5rem;
+    line-height: 2rem;
+    vertical-align: bottom;
+    margin-right: 0.5rem;
+    width: auto;
+}
+
+.draw-section {
+    font-size: 40px;
+    padding-bottom: 40px;
+    padding-top: 60px;
+    height: 90%;
+}

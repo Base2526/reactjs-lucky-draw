@@ -11,6 +11,8 @@ import SiteWrapper from "../../SiteWrapper";
 import "tabler-react/dist/Tabler.css";
 import { REVIEW } from "../Json-ld";
 
+import { text } from './content.txt';
+
 const style = {
   drawForm: {
     width: "100%",
@@ -54,19 +56,66 @@ class App extends Component {
   }
 
   UNSAFE_componentWillMount (){
-    // console.log('UNSAFE_componentWillMount')
-    // let formInputItems = "1\n2\n";
-    let formInputItems = "1\n2";
+    console.log('UNSAFE_componentWillMount', text)
+
+    // fetch('content.txt').then()
+
+    // fetch('./content.txt')
+    //   // .then(response => response)
+    //   .then((response) => {
+    //     return response.text();
+    //  })
+    //   .then(data => {
+
+    //     console.log("data", data)
+
+    //     })
+    //     .catch(err => console.log('xx', err));
+
+   // Show Error When Use Fetch Method With Import Method
+// fetch(text).then(function(response) {
+//   return response
+// }).then(function(data) {
+// console.log(data)
+//  return data
+// }).then(function(Normal) {
+//  console.log(Normal.text)
+// //  document.getElementById("app").innerHTML = Normal;
+// }).catch(function(err) {
+//  console.log('Fetch problem show: ' + err.message);
+// });
+
+let _this = this
+
+     fetch("./content.txt").then(
+      function(res){
+      return res.text()
+    }).then(function(data){
+    // store Data in State Data Variable
+      // setData(data)
+
+      // console.log(data)
+
+      // let formInputItems = "1\n2\n";
+    let formInputItems = data;
     let itemList = formInputItems.split("\n");
 
-    // console.log(itemList)
-    this.setState({
-      ...this.state,
+    console.log(itemList)
+    _this.setState({
+      ..._this.state,
       value: formInputItems,
       drawItems: formInputItems,
       items: itemList,
       currentItems: itemList,
     });
+    }).catch(
+      function(err){
+        console.log(err, ' error')
+      }
+    )
+
+
+    
   }
 
   handleSubmit(e) {

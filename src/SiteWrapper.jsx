@@ -97,7 +97,6 @@ class SiteWrapper extends React.Component {
           //     </Button.List>
           //   </React.Fragment>
           // ),
-
           // copyright: (
           //   <React.Fragment>
           //     Copyright © 2019 - {new Date().getFullYear()}
