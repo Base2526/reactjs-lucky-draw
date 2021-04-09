@@ -73,7 +73,7 @@ class SiteWrapper extends React.Component {
           //   </Nav.Item>
           // ),
         }}
-        navProps={{ itemsObjects: navBarItems }}
+        // navProps={{ itemsObjects: navBarItems }}
         footerProps={{
           // links: (
           //   "HELLO WORLD"

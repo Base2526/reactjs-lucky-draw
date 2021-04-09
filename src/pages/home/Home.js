@@ -33,7 +33,7 @@ class App extends Component {
       showResult: false,
       disableDrawButton: false,
       value: "",
-      placeholder: "Please enter the draw items here. One item per line.",
+      placeholder: "ใส่รายการผู้เข้าร่วมทั้งหมด. One item per line.",
       valid: false,
       touched: false,
       validationRules: {
@@ -151,7 +151,7 @@ class App extends Component {
                   onClick={this.randomDrawItem}
                   disabled={disableDrawButton || currentItems.length <= 1}
                 >
-                  {disableDrawButton ? "Drawing..." : "Draw"}
+                  {disableDrawButton ? "กำลังสุ่ม..." : "กดเพือสุ่ม"}
                 </Button>
               </Grid.Col>
               <Grid.Col md={4} sm={12}>
