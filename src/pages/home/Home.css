@@ -12,11 +12,19 @@
 }
 
 .draw-section {
-  font-size: 40px;
+  font-size: 16px !important;
   padding-bottom: 40px;
   padding-top: 40px;
 }
 
 .contribute-button {
   margin-left: 18px,
+}
+
+.header-brand-img {
+  height: 10rem !important;
+}
+
+.past-drawn-item {
+  text-align: left !important;
 }

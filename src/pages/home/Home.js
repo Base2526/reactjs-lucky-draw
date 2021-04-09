@@ -209,7 +209,7 @@ let _this = this
                   {!showResult && items && (
                     <TextLoop
                       className="draw-text"
-                      interval={100}
+                      interval={50}
                       springConfig={{ stiffness: 180, damping: 8 }}
                       children={items}
                     />
@@ -221,11 +221,12 @@ let _this = this
                   pill
                   block
                   name="drawButton"
+                  className="randomButton"
                   color="success"
                   onClick={this.randomDrawItem}
                   disabled={disableDrawButton || currentItems.length <= 1}
                 >
-                  {disableDrawButton ? "กำลังสุ่ม..." : "กดเพือสุ่ม"}
+                  {disableDrawButton ? "กำลังสุ่มผู้โชคดี..." : "สุ่มผู้โชคดี"}
                 </Button>
               </Grid.Col>
               <Grid.Col md={6} sm={12}>
