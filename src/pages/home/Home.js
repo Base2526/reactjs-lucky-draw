@@ -42,6 +42,9 @@ class App extends Component {
       },
     };
 
+
+    
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSkipAnimationChange = this.handleSkipAnimationChange.bind(this);
@@ -50,11 +53,29 @@ class App extends Component {
     );
   }
 
+  UNSAFE_componentWillMount (){
+    // console.log('UNSAFE_componentWillMount')
+    // let formInputItems = "1\n2\n";
+    let formInputItems = "1\n2";
+    let itemList = formInputItems.split("\n");
+
+    // console.log(itemList)
+    this.setState({
+      ...this.state,
+      value: formInputItems,
+      drawItems: formInputItems,
+      items: itemList,
+      currentItems: itemList,
+    });
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     if (this.state.drawItems.length > 2) {
       let formInputItems = this.state.drawItems;
       let itemList = formInputItems.split("\n");
+
+      console.log(itemList)
       this.setState({
         ...this.state,
         items: itemList,
@@ -112,6 +133,7 @@ class App extends Component {
 
   render() {
     const {
+      value,
       items,
       drawItems,
       currentItems,
@@ -121,6 +143,9 @@ class App extends Component {
       placeholder,
       showResult,
     } = this.state;
+
+    // console.log('drawItems : ', drawItems.length, typeof drawItems )
+    // let drawItems = "1\n2\n";
     return (
       <SiteWrapper>
         <Helmet>
@@ -163,6 +188,7 @@ class App extends Component {
         <Grid.Row>
           <Grid.Col xs={12} md={8}>
             <DrawForm
+              value={value}
               drawItems={drawItems}
               onSubmit={this.handleSubmit}
               handleSkipAnimationChange={this.handleSkipAnimationChange}

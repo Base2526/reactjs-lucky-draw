@@ -24,6 +24,12 @@ class DrawForm extends Component {
       handleRemoveDrawnItemChange
     } = this.props;
 
+
+    // console.log(drawItems = '1\n2\n')
+    // drawItems.map((i, k)=>{
+    //   console.log(i, k)
+    // })
+
     return (
       <div style={style} className={className}>
         <Header.H3>ตั้งค่า</Header.H3>
