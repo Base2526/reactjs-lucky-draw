@@ -155,7 +155,7 @@ class App extends Component {
         {items.length !== 0 && (
           <div className="draw-block">
             <Grid.Row>
-              <Grid.Col md={5} sm={12}>
+              <Grid.Col md={6} sm={12}>
                 <div className="draw-section">
                   {!showResult && items && (
                     <TextLoop
@@ -172,21 +172,21 @@ class App extends Component {
                   pill
                   block
                   name="drawButton"
-                  color="primary"
+                  color="success"
                   onClick={this.randomDrawItem}
                   disabled={disableDrawButton || currentItems.length <= 1}
                 >
                   {disableDrawButton ? "กำลังสุ่ม..." : "กดเพือสุ่ม"}
                 </Button>
               </Grid.Col>
-              <Grid.Col md={4} sm={12}>
+              <Grid.Col md={6} sm={12}>
                 <PreviouslyDrawnItemsBlock pastDrawnItems={pastDrawnItems} />
               </Grid.Col>
             </Grid.Row>
           </div>
         )}
         <Grid.Row>
-          <Grid.Col xs={12} md={8}>
+          <Grid.Col xs={6} md={12}>
             <DrawForm
               value={value}
               drawItems={drawItems}
@@ -199,7 +199,7 @@ class App extends Component {
             />
           </Grid.Col>
         </Grid.Row>
-        <hr />
+        {/* <hr /> */}
         {/* <Grid.Row>
           <Grid.Col xs={12} md={8}>
             <h2>Sponsors</h2>
@@ -247,7 +247,7 @@ class App extends Component {
             </a>
           </Grid.Col>
         </Grid.Row> */}
-        <hr />
+        {/* <hr /> */}
         {/* <Grid.Row>
           <Grid.Col xs={12} md={6}>
             <h2>What Our Users Say</h2>

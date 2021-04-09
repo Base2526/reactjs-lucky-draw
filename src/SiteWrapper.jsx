@@ -31,7 +31,7 @@ class SiteWrapper extends React.Component {
         headerProps={{
           href: "/",
           alt: APP_NAME,
-          imageURL: "images/luckydraw-logo.svg",
+          imageURL: "images/bigc-logo.jpg",
           // navItems: (
           //   <Nav.Item type="div" className="d-none d-md-flex">
           //     <Button

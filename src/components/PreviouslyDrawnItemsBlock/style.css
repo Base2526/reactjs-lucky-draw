@@ -1,7 +1,17 @@
 .past-drawn-block {
-  height: 250px;
+  height: 600px;
   overflow-y: scroll;
 }
 .past-drawn-item {
   text-align: center;
+}
+
+.card-body{
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+td{
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 }
