@@ -130,7 +130,7 @@ class App extends Component {
         {items.length !== 0 && (
           <div className="draw-block">
             <Grid.Row>
-              <Grid.Col md={5} sm={12}>
+              <Grid.Col md={6} sm={12}>
                 <div className="draw-section">
                   {!showResult && items && (
                     <TextLoop
@@ -154,14 +154,14 @@ class App extends Component {
                   {disableDrawButton ? "Drawing..." : "Draw"}
                 </Button>
               </Grid.Col>
-              <Grid.Col md={4} sm={12}>
+              <Grid.Col md={6} sm={12}>
                 <PreviouslyDrawnItemsBlock pastDrawnItems={pastDrawnItems} />
               </Grid.Col>
             </Grid.Row>
           </div>
         )}
         <Grid.Row>
-          <Grid.Col xs={12} md={8}>
+          <Grid.Col xs={6} md={12}>
             <DrawForm
               drawItems={drawItems}
               onSubmit={this.handleSubmit}
