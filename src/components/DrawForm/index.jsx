@@ -26,11 +26,11 @@ class DrawForm extends Component {
 
     return (
       <div style={style} className={className}>
-        <Header.H3>Configuration</Header.H3>
+        <Header.H3>ตั้งค่า</Header.H3>
         <div className="form">
           <Form onSubmit={onSubmit}>
             <Form.FieldSet>
-              <Form.Group label="List of Items" isRequired>
+              <Form.Group label="รายการผู้เข้าร่วมทั้งหมด" isRequired>
                 <Form.Textarea
                   name="drawItems"
                   placeholder={placeholder}
@@ -41,7 +41,7 @@ class DrawForm extends Component {
               <Form.Group>
                 <Form.Checkbox
                   name="skipAnimation"
-                  label="Skip Animation"
+                  label="ไม่แสดง Animation"
                   onChange={handleSkipAnimationChange}
                 />
               </Form.Group>
@@ -57,7 +57,7 @@ class DrawForm extends Component {
                 type="submit"
                 disabled={drawItems.length < 2}
               >
-                Configure
+              บันทึกการตั้งค่า
               </Button>
             </Form.FieldSet>
           </Form>
